@@ -325,4 +325,139 @@
    */
   new PureCounter();
 
+  const teamMembers = [
+    {
+      name: 'Laura Barajas',
+      title: 'Líder de Excelencia Operativa',
+      imageUrl: 'assets/img/team/laura.webp',
+      imageAlt: 'Imagen de perfil de Laura Barajas',
+      linkedin: 'https://www.linkedin.com/in/laura-barajasmartell/'
+    },
+    {
+      name: 'Maximiliano Flores',
+      title: 'Líder de Desarrollo',
+      imageUrl: 'assets/img/team/max.webp',
+      imageAlt: 'Imagen de perfil de Maximiliano Flores',
+      linkedin: 'https://www.linkedin.com/in/maximilianofloresrubio/'
+    },
+    {
+      name: 'Jonathan Cruz',
+      title: 'Líder de Gestión Empresarial',
+      imageUrl: 'assets/img/team/jonathan.webp',
+      imageAlt: 'Imagen de perfil de Jonathan Cruz',
+      linkedin: '', // No LinkedIn profile
+    },
+    {
+      name: 'Omar Saldaña',
+      title: 'Investigación',
+      imageUrl: 'assets/img/team/omar.webp',
+      imageAlt: 'Imagen de perfil de Omar Saldaña',
+      linkedin: 'https://www.linkedin.com/in/omar-salda%C3%B1a-penetro-658ab9b1/'
+    },
+    {
+      name: 'José Luis Rodríguez',
+      title: 'Pruebas y Simulaciones',
+      imageUrl: 'assets/img/team/chepe.webp',
+      imageAlt: 'Imagen de perfil de José Luis (Chepe) Rodríguez',
+      linkedin: '', // No LinkedIn profile
+    },
+    {
+      name: 'Gerardo Pérez',
+      title: 'Diseño y Manufactura',
+      imageUrl: 'assets/img/team/gerardo.webp',
+      imageAlt: 'Imagen de perfil de Gerardo Pérez',
+      linkedin: '', // No LinkedIn profile
+    },
+    {
+      name: 'Regina Guzmán',
+      title: 'Marketing y Financiamiento',
+      imageUrl: 'assets/img/team/regina.webp',
+      imageAlt: 'Imagen de perfil de Regina Guzmán',
+      linkedin: 'https://www.linkedin.com/in/regina-guzm%C3%A1n-4a10531a8/'
+    },
+    {
+      name: 'Arlette Silva',
+      title: 'Vinculación',
+      imageUrl: 'assets/img/team/arlette.webp',
+      imageAlt: 'Imagen de perfil de Arlette Silva',
+      linkedin: '', // No LinkedIn profile
+    },
+    {
+      name: 'Katia Lombardo',
+      title: 'Investigación',
+      imageUrl: 'assets/img/team/katia.webp',
+      imageAlt: 'Imagen de perfil de Katia Lombardo',
+      linkedin: '', // No LinkedIn profile
+    },
+    {
+      name: 'Flavio Heredia',
+      title: 'Pruebas y Simulación',
+      imageUrl: 'assets/img/team/flavio.webp',
+      imageAlt: 'Imagen de perfil de Flavio Heredia',
+      linkedin: '', // No LinkedIn profile
+    },
+    {
+      name: 'Nadia Zenteno',
+      title: 'Marketing y Financiamiento',
+      imageUrl: 'assets/img/team/nadia.webp',
+      imageAlt: 'Imagen de perfil de Nadia Zenteno',
+      linkedin: 'https://www.linkedin.com/in/nadia-lizbeth-zenteno-/'
+    },
+    {
+      name: 'Ivan Galaviz',
+      title: 'Marketing y Financiamiento',
+      imageUrl: 'assets/img/team/ivan.webp',
+      imageAlt: 'Imagen de perfil de Ivan Galaviz',
+      linkedin: 'https://www.linkedin.com/in/ivanovishado/'
+    }
+  ];
+  
+  const container = document.getElementById('team-members-desktop');
+  
+  teamMembers.forEach(member => {
+    const memberHTML = `
+      <div class="col-lg-3 col-md-6">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <div class="ratio ratio-1x1 mb-3" style="overflow: hidden;">
+            <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
+          </div>
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>${member.name}</h4>
+              <span>${member.title}</span>
+              <div class="social">
+                ${member.linkedin ? `<a href="${member.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    container.innerHTML += memberHTML;
+  });
+
+  const carouselInner = document.getElementById('team-carousel-inner');
+
+  teamMembers.forEach((member, index) => {
+    const activeClass = index === 0 ? 'active' : '';
+  
+    const itemHTML = `
+      <div class="carousel-item ${activeClass}">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>${member.name}</h4>
+              <span>${member.title}</span>
+              <div class="social">
+                ${member.linkedin ? `<a href="${member.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    carouselInner.innerHTML += itemHTML;
+  });
+
 })()
