@@ -2206,18 +2206,3 @@ section {
   font-size: 13px;
   color: #ddd;
 }
-
-#mediaCarousel img {
-  max-height: 150px;  /* Adjust the logo height */
-  object-fit: contain; /* Ensures the image maintains aspect ratio */
-}
-
-#mediaCarousel a {
-  text-decoration: none;  /* Removes any underline on the link */
-}
-
-@media (max-width: 768px) {
-  #mediaCarousel img {
-    max-height: 100px; /* Smaller height for mobile devices */
-  }
-}
