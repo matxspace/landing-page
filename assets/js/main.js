@@ -524,14 +524,4 @@
     carouselContainer.appendChild(carouselItem);
   });
 
-  // Initialize the media carousel
-  var mediaCarouselElement = document.querySelector('#mediaCarousel');
-  if (mediaCarouselElement) {
-    var mediaCarousel = new bootstrap.Carousel(mediaCarouselElement, {
-      interval: 3000,  // Slide every 3 seconds
-      pause: 'hover'   // Pause on hover
-    });
-    mediaCarousel.cycle(); // Ensure the carousel starts moving immediately
-  }
-
 })()
