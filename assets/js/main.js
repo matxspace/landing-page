@@ -460,4 +460,68 @@
     carouselInner.innerHTML += itemHTML;
   });
 
+  // List of media items
+  const mediaItems = [
+    {
+      link: "https://www.forbes.com.mx/musk-llevara-un-experimento-mexicano-al-espacio-en-octubre/",
+      logo: "./assets/img/news-carousel/1.png",
+      alt: "Newspaper 1"
+    },
+    {
+      link: "https://www.viveusa.mx/noticias/elon-musk-llevara-experimento-mexicano-al-espacio-con-la-iniciativa-space-x/",
+      logo: "./assets/img/news-carousel/2.png",
+      alt: "Newspaper 2"
+    },
+    {
+      link: "https://www.tvazteca.com/aztecanoticias/space-x-llevara-experimento-mexicano-mcb-1-a-la-eei-en-octubre",
+      logo: "./assets/img/news-carousel/3.png",
+      alt: "Newspaper 3"
+    },
+    {
+      link: "https://www.swissinfo.ch/spa/experimento-mexicano-viajar%C3%A1-al-espacio-con-la-iniciativa-space-x-de-elon-musk-en-octubre/87534156",
+      logo: "./assets/img/news-carousel/4.png",
+      alt: "Newspaper 4"
+    },
+    {
+      link: "https://spacewatchafrica.com/elon-musks-space-x-to-fly-mexican-experiment-mcb-1-to-the-international-space-station-in-october/",
+      logo: "./assets/img/news-carousel/5.png",
+      alt: "Newspaper 5"
+    },
+    {
+      link: "https://www.nmas.com.mx/noticieros/programas/despierta/videos/space-x-llevara-experimento-mexicano-la-estacion-espacial-internacional/",
+      logo: "./assets/img/news-carousel/6.png",
+      alt: "Newspaper 6"
+    }
+  ];
+
+  // Reference to the carousel inner container
+  const carouselContainer = document.getElementById('carouselItemsContainer');
+
+  // Function to create carousel items dynamically
+  mediaItems.forEach((item, index) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.className = 'carousel-item';
+
+    // Make the first item active
+    if (index === 0) {
+      carouselItem.classList.add('active');
+    }
+
+    const anchor = document.createElement('a');
+    anchor.href = item.link;
+    anchor.target = '_blank';
+
+    const img = document.createElement('img');
+    img.src = item.logo;
+    img.alt = item.alt;
+    img.className = 'd-block mx-auto';
+    img.style.height = '100px'; // Set a fixed height
+    img.style.width = '100%';
+    img.style.objectFit = 'contain'; // Maintain aspect ratio
+
+    anchor.appendChild(img);
+    carouselItem.appendChild(anchor);
+    carouselContainer.appendChild(carouselItem);
+  });
+
 })()
