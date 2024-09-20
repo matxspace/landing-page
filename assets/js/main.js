@@ -460,4 +460,13 @@
     carouselInner.innerHTML += itemHTML;
   });
 
+  var carouselElement = document.querySelector('#mediaCarousel');
+
+  var carousel = new bootstrap.Carousel(carouselElement, {
+    interval: 3000,  // Slide every 3 seconds
+    pause: 'hover'   // Pause on hover
+  });
+
+  carousel.cycle(); // Ensure the carousel starts moving immediately
+
 })()
