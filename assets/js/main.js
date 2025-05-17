@@ -463,11 +463,6 @@
   // List of media items
   const mediaItems = [
     {
-      link: "https://www.viveusa.mx/noticias/elon-musk-llevara-experimento-mexicano-al-espacio-con-la-iniciativa-space-x/",
-      logo: "./assets/img/news-carousel/2.png",
-      alt: "Logo de ViveUSA"
-    },
-    {
       link: "https://www.forbes.com.mx/musk-llevara-un-experimento-mexicano-al-espacio-en-octubre/",
       logo: "./assets/img/news-carousel/logo_forbes_mexico.png",
       alt: "Logo de Forbes México"
@@ -478,39 +473,43 @@
       alt: "Logo de EL PAÍS"
     },
     {
+      link: "https://www.gob.mx/sct/prensa/lanza-con-exito-space-x-experimento-mexicano-mcb-1-a-la-estacion-espacial-internacional",
+      logo: "./assets/img/news-carousel/SCT.png",
+      alt: "Logo de la Secretaría de Comunicaciones y Transportes de México"
+    },
+    {
+      link: "https://www.viveusa.mx/noticias/elon-musk-llevara-experimento-mexicano-al-espacio-con-la-iniciativa-space-x/",
+      logo: "./assets/img/news-carousel/2.png",
+      alt: "Logo de ViveUSA"
+    },
+    {
       link: "https://www.tvazteca.com/aztecanoticias/space-x-llevara-experimento-mexicano-mcb-1-a-la-eei-en-octubre",
       logo: "./assets/img/news-carousel/3.png",
       alt: "Logo de Azteca Noticias"
     },
     {
-      link: "https://www.swissinfo.ch/spa/experimento-mexicano-viajar%C3%A1-al-espacio-con-la-iniciativa-space-x-de-elon-musk-en-octubre/87534156",
+      link: "https://www.swissinfo.ch/spa/experimento-mexicano-%27mcb-1%27-parte-al-espacio-con-%c3%a9xito-en-misi%c3%b3n-de-space-x-de-elon-musk/88000970",
       logo: "./assets/img/news-carousel/4.png",
       alt: "Logo de SWI swissinfo"
-    },
-    {
-      link: "https://spacewatchafrica.com/elon-musks-space-x-to-fly-mexican-experiment-mcb-1-to-the-international-space-station-in-october/",
-      logo: "./assets/img/news-carousel/5.png",
-      alt: "Logo de Space Watch Africa"
     },
     {
       link: "https://www.nmas.com.mx/noticieros/programas/despierta/videos/space-x-llevara-experimento-mexicano-la-estacion-espacial-internacional/",
       logo: "./assets/img/news-carousel/6.png",
       alt: "Logo de Noticieros Televisa"
+    },
+    {
+      link: "https://spacewatchafrica.com/elon-musks-space-x-to-fly-mexican-experiment-mcb-1-to-the-international-space-station-in-october/",
+      logo: "./assets/img/news-carousel/5.png",
+      alt: "Logo de Space Watch Africa"
     }
   ];
 
-  // Reference to the carousel inner container
-  const carouselContainer = document.getElementById('carouselItemsContainer');
+  const gridContainer = document.getElementById('newsGridContainer');
 
-  // Function to create carousel items dynamically
-  mediaItems.forEach((item, index) => {
-    const carouselItem = document.createElement('div');
-    carouselItem.className = 'carousel-item';
-
-    // Make the first item active
-    if (index === 0) {
-      carouselItem.classList.add('active');
-    }
+  // Function to create grid items dynamically
+  mediaItems.forEach((item) => {
+    const gridItem = document.createElement('div');
+    gridItem.className = 'news-grid-item';
 
     const anchor = document.createElement('a');
     anchor.href = item.link;
@@ -519,14 +518,11 @@
     const img = document.createElement('img');
     img.src = item.logo;
     img.alt = item.alt;
-    img.className = 'd-block mx-auto';
-    img.style.height = '100px'; // Set a fixed height
-    img.style.width = '100%';
-    img.style.objectFit = 'contain'; // Maintain aspect ratio
+    img.className = 'news-logo';
 
     anchor.appendChild(img);
-    carouselItem.appendChild(anchor);
-    carouselContainer.appendChild(carouselItem);
+    gridItem.appendChild(anchor);
+    gridContainer.appendChild(gridItem);
   });
 
 })()
