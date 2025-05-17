@@ -463,34 +463,39 @@
   // List of media items
   const mediaItems = [
     {
-      link: "https://www.forbes.com.mx/musk-llevara-un-experimento-mexicano-al-espacio-en-octubre/",
-      logo: "./assets/img/news-carousel/1.png",
-      alt: "Newspaper 1"
-    },
-    {
       link: "https://www.viveusa.mx/noticias/elon-musk-llevara-experimento-mexicano-al-espacio-con-la-iniciativa-space-x/",
       logo: "./assets/img/news-carousel/2.png",
-      alt: "Newspaper 2"
+      alt: "Logo de ViveUSA"
+    },
+    {
+      link: "https://www.forbes.com.mx/musk-llevara-un-experimento-mexicano-al-espacio-en-octubre/",
+      logo: "./assets/img/news-carousel/logo_forbes_mexico.png",
+      alt: "Logo de Forbes México"
+    },
+    {
+      link: "https://elpais.com/mexico/2024-12-02/los-chicos-que-sonaban-con-las-estrellas-la-historia-detras-del-ultimo-experimento-de-mexico-en-el-espacio.html",
+      logo: "./assets/img/news-carousel/el-pais.png",
+      alt: "Logo de EL PAÍS"
     },
     {
       link: "https://www.tvazteca.com/aztecanoticias/space-x-llevara-experimento-mexicano-mcb-1-a-la-eei-en-octubre",
       logo: "./assets/img/news-carousel/3.png",
-      alt: "Newspaper 3"
+      alt: "Logo de Azteca Noticias"
     },
     {
       link: "https://www.swissinfo.ch/spa/experimento-mexicano-viajar%C3%A1-al-espacio-con-la-iniciativa-space-x-de-elon-musk-en-octubre/87534156",
       logo: "./assets/img/news-carousel/4.png",
-      alt: "Newspaper 4"
+      alt: "Logo de SWI swissinfo"
     },
     {
       link: "https://spacewatchafrica.com/elon-musks-space-x-to-fly-mexican-experiment-mcb-1-to-the-international-space-station-in-october/",
       logo: "./assets/img/news-carousel/5.png",
-      alt: "Newspaper 5"
+      alt: "Logo de Space Watch Africa"
     },
     {
       link: "https://www.nmas.com.mx/noticieros/programas/despierta/videos/space-x-llevara-experimento-mexicano-la-estacion-espacial-internacional/",
       logo: "./assets/img/news-carousel/6.png",
-      alt: "Newspaper 6"
+      alt: "Logo de Noticieros Televisa"
     }
   ];
 
