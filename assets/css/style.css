@@ -799,6 +799,57 @@ section {
   padding: 0 20px 20px 20px;
 }
 
+/* Ensure cards are the same height on desktop */
+@media (min-width: 992px) {
+  #about .row {
+    display: flex;
+  }
+
+  #about .about-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #about .about-col .img {
+    position: relative;
+    z-index: 20;
+  }
+
+  #about .about-col .img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #about .about-col .content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #about .about-col h2 {
+    flex: 0 0 auto;
+  }
+
+  #about .about-col p {
+    flex: 1 0 auto;
+  }
+
+  #about .about-col .icon {
+    z-index: 21;
+    bottom: -32px;
+  }
+
+  #about .about-col h2,
+  #about .about-col p {
+    position: relative;
+    z-index: 10;
+  }
+}
+
 /* Services Section
 --------------------------------*/
 #services {
