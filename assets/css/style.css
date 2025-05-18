@@ -2257,3 +2257,54 @@ section {
   font-size: 13px;
   color: #ddd;
 }
+
+/* News grid container */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Grid item */
+.news-grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo styling */
+.news-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.news-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .news-logo {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-grid {
+    padding: 10px;
+  }
+
+  .news-logo {
+    max-width: 120px;
+  }
+}
