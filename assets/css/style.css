@@ -293,6 +293,10 @@ h6 {
   .navbar ul {
     display: none;
   }
+
+  .navbar a {
+    justify-content: start;
+  }
 }
 
 .navbar-mobile {
