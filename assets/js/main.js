@@ -341,13 +341,6 @@
       linkedin: 'https://www.linkedin.com/in/maximilianofloresrubio/'
     },
     {
-      name: 'Jonathan Cruz',
-      title: 'Líder de Gestión Empresarial',
-      imageUrl: 'assets/img/team/jonathan.webp',
-      imageAlt: 'Imagen de perfil de Jonathan Cruz',
-      linkedin: '', // No LinkedIn profile
-    },
-    {
       name: 'Omar Saldaña',
       title: 'Investigación',
       imageUrl: 'assets/img/team/omar.webp',
@@ -395,13 +388,6 @@
       imageUrl: 'assets/img/team/flavio.webp',
       imageAlt: 'Imagen de perfil de Flavio Heredia',
       linkedin: '', // No LinkedIn profile
-    },
-    {
-      name: 'Nadia Zenteno',
-      title: 'Marketing y Financiamiento',
-      imageUrl: 'assets/img/team/nadia.webp',
-      imageAlt: 'Imagen de perfil de Nadia Zenteno',
-      linkedin: 'https://www.linkedin.com/in/nadia-lizbeth-zenteno-/'
     },
     {
       name: 'Ivan Galaviz',
