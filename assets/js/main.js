@@ -341,13 +341,6 @@
       linkedin: 'https://www.linkedin.com/in/maximilianofloresrubio/'
     },
     {
-      name: 'Jonathan Cruz',
-      title: 'Líder de Gestión Empresarial',
-      imageUrl: 'assets/img/team/jonathan.webp',
-      imageAlt: 'Imagen de perfil de Jonathan Cruz',
-      linkedin: '', // No LinkedIn profile
-    },
-    {
       name: 'Omar Saldaña',
       title: 'Investigación',
       imageUrl: 'assets/img/team/omar.webp',
@@ -397,13 +390,6 @@
       linkedin: '', // No LinkedIn profile
     },
     {
-      name: 'Nadia Zenteno',
-      title: 'Marketing y Financiamiento',
-      imageUrl: 'assets/img/team/nadia.webp',
-      imageAlt: 'Imagen de perfil de Nadia Zenteno',
-      linkedin: 'https://www.linkedin.com/in/nadia-lizbeth-zenteno-/'
-    },
-    {
       name: 'Ivan Galaviz',
       title: 'Marketing y Financiamiento',
       imageUrl: 'assets/img/team/ivan.webp',
@@ -414,9 +400,13 @@
   
   const container = document.getElementById('team-members-desktop');
   
-  teamMembers.forEach(member => {
+  teamMembers.forEach((member, index) => {
+    let extraClass = '';
+    if (index === 9) {
+      extraClass = 'offset-lg-4';
+    }
     const memberHTML = `
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-4 col-md-6 ${extraClass}">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="ratio ratio-1x1 mb-3" style="overflow: hidden;">
             <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
