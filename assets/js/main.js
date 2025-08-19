@@ -400,9 +400,13 @@
   
   const container = document.getElementById('team-members-desktop');
   
-  teamMembers.forEach(member => {
+  teamMembers.forEach((member, index) => {
+    let extraClass = '';
+    if (index === 9) {
+      extraClass = 'offset-lg-4';
+    }
     const memberHTML = `
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-4 col-md-6 ${extraClass}">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="ratio ratio-1x1 mb-3" style="overflow: hidden;">
             <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
