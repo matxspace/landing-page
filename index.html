@@ -65,24 +65,6 @@
     }
   </script>
 
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0a16d5df-4d0a-408b-a4fd-1ebdffe62599" data-blockingmode="auto" type="text/javascript"></script>
-
-  <!-- Load ga.js with Consent Management -->
-  <script 
-    type="text/plain" 
-    data-cookieconsent="statistics" 
-    src="/assets/js/ga.js">
-  </script>
-
-  <!-- Clarity tracking code for https://www.matxspace.com/ -->
-  <script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "qlp2ow5m1s");
-  </script>
-
   <!-- =======================================================
   * Template Name: BizPage
   * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
@@ -601,19 +583,25 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Mat X Space</strong>. Todos los derechos reservados
-      </div>
-      <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-      -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+     <div class="container">
+       <div class="copyright">
+         &copy; Copyright <strong>Mat X Space</strong>. Todos los derechos reservados
+       </div>
+       <div class="cookie-preferences">
+         <a href="#" class="cookie-preferences-link" onclick="showConsentBanner(); return false;">Configuración de cookies</a>
+       </div>
+       <div class="credits">
+         <!--
+         All the links in the footer should remain intact.
+         You can delete the links only if you purchased the pro version.
+         Licensing information: https://bootstrapmade.com/license/
+         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+       -->
+         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+         <div class="privacy-notice" style="margin-top: 8px; font-size: 11px; color: #666;">
+           <i class="bi bi-shield-check" style="margin-right: 4px;"></i>Respetamos su privacidad - herramientas de bloqueo de anuncios desactivan el seguimiento
+         </div>
+       </div>
     </div>
   </footer><!-- End Footer -->
 
@@ -631,9 +619,12 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+   <!-- Template Main JS File -->
+   <script src="assets/js/main.js"></script>
 
-</body>
+   <!-- Cookie Consent Management -->
+   <script src="assets/js/cookie-consent.js"></script>
+
+ </body>
 
 </html>
