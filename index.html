@@ -122,7 +122,6 @@
               playsinline
               id="heroVideo"
               poster="/.netlify/images?url=assets/img/hero-carousel/iss.jpg&w=1200&q=80&fm=webp"
-              style="display:none;"
             >
               <source src="assets/videos/iss-720.mp4" media="(max-width: 768px)" type="video/mp4">
               <source src="assets/videos/iss-1080.mp4" media="(min-width: 769px)" type="video/mp4">
@@ -633,22 +632,6 @@
 
     <!-- Cookie Consent Management -->
     <script src="assets/js/cookie-consent.js"></script>
-
-    <!-- Hero Video Delayed Loading -->
-    <script>
-    window.addEventListener('load', () => {
-      const heroVideo = document.getElementById('heroVideo');
-      if (heroVideo) {
-        setTimeout(() => {
-          heroVideo.style.display = 'block';
-          heroVideo.load();
-          heroVideo.play().catch(error => {
-            console.log('Autoplay prevented:', error);
-          });
-        }, 500);
-      }
-    });
-    </script>
 
  </body>
 
