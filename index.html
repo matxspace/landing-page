@@ -115,8 +115,17 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="carousel-item active">
-            <video autoplay muted loop playsinline id="heroVideo">
-              <source src="assets/videos/iss.mp4" type="video/mp4">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              id="heroVideo"
+              poster="assets/img/hero-carousel/iss.jpg"
+              style="display:none;"
+            >
+              <source src="assets/videos/iss-720.mp4" media="(max-width: 768px)" type="video/mp4">
+              <source src="assets/videos/iss-1080.mp4" media="(min-width: 769px)" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <div class="overlay"></div>
@@ -622,8 +631,24 @@
    <!-- Template Main JS File -->
    <script src="assets/js/main.js"></script>
 
-   <!-- Cookie Consent Management -->
-   <script src="assets/js/cookie-consent.js"></script>
+    <!-- Cookie Consent Management -->
+    <script src="assets/js/cookie-consent.js"></script>
+
+    <!-- Hero Video Delayed Loading -->
+    <script>
+    window.addEventListener('load', () => {
+      const heroVideo = document.getElementById('heroVideo');
+      if (heroVideo) {
+        setTimeout(() => {
+          heroVideo.style.display = 'block';
+          heroVideo.load();
+          heroVideo.play().catch(error => {
+            console.log('Autoplay prevented:', error);
+          });
+        }, 500);
+      }
+    });
+    </script>
 
  </body>
 
