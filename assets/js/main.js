@@ -350,21 +350,21 @@
     {
       name: 'José Luis Rodríguez',
       title: 'Pruebas y Simulaciones',
-      imageUrl: 'assets/img/team/chepe.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/chepe.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de José Luis (Chepe) Rodríguez',
       linkedin: '', // No LinkedIn profile
     },
     {
       name: 'Gerardo Pérez',
       title: 'Diseño y Manufactura',
-      imageUrl: 'assets/img/team/gerardo.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/gerardo.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Gerardo Pérez',
       linkedin: '', // No LinkedIn profile
     },
     {
       name: 'Regina Guzmán',
       title: 'Marketing y Financiamiento',
-      imageUrl: 'assets/img/team/regina.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/regina.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Regina Guzmán',
       linkedin: 'https://www.linkedin.com/in/regina-guzm%C3%A1n-4a10531a8/'
     },
@@ -392,7 +392,7 @@
     {
       name: 'Ivan Galaviz',
       title: 'Marketing y Financiamiento',
-      imageUrl: 'assets/img/team/ivan.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/ivan.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Ivan Galaviz',
       linkedin: 'https://www.linkedin.com/in/ivanovishado/'
     }
