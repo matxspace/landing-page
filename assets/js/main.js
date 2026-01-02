@@ -409,7 +409,7 @@
       <div class="col-lg-4 col-md-6 ${extraClass}">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="ratio ratio-1x1 mb-3" style="overflow: hidden;">
-            <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
+            <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}" loading="lazy">
           </div>
           <div class="member-info">
             <div class="member-info-content">
@@ -434,7 +434,7 @@
     const itemHTML = `
       <div class="carousel-item ${activeClass}">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
-          <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
+          <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}" loading="lazy">
           <div class="member-info">
             <div class="member-info-content">
               <h4>${member.name}</h4>
@@ -509,6 +509,7 @@
     img.src = item.logo;
     img.alt = item.alt;
     img.className = 'news-logo';
+    img.loading = 'lazy';
 
     anchor.appendChild(img);
     gridItem.appendChild(anchor);
