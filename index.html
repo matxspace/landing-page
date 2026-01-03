@@ -645,7 +645,10 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             // Video is now visible, try to play
-            heroVideo.play().catch(error => {
+            heroVideo.play().then(() => {
+              // Video started successfully, fade it in
+              heroVideo.classList.add('loaded');
+            }).catch(error => {
               console.log('Autoplay prevented:', error);
             });
             
