@@ -120,8 +120,10 @@
               muted
               loop
               playsinline
+              webkit-playsinline="true"
               id="heroVideo"
               poster="/.netlify/images?url=assets/img/hero-carousel/iss.jpg&w=1200&q=80&fm=webp"
+              preload="metadata"
             >
               <source src="assets/videos/iss-720.mp4" media="(max-width: 768px)" type="video/mp4">
               <source src="assets/videos/iss-1080.mp4" media="(min-width: 769px)" type="video/mp4">
@@ -633,6 +635,36 @@
     <!-- Cookie Consent Management -->
     <script src="assets/js/cookie-consent.js"></script>
 
- </body>
+    <!-- Hero Video Autoplay Fix for Safari/iOS -->
+    <script>
+    window.addEventListener('load', () => {
+      const heroVideo = document.getElementById('heroVideo');
+      
+      // Intersection Observer to play video when visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Video is now visible, try to play
+            heroVideo.play().catch(error => {
+              console.log('Autoplay prevented:', error);
+            });
+            
+            // Stop observing once video is visible
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1, // Trigger when 10% visible
+        rootMargin: '50px' // Start loading slightly before fully visible
+      });
+
+      // Start observing the video element
+      if (heroVideo) {
+        observer.observe(heroVideo);
+      }
+    });
+    </script>
+
+  </body>
 
 </html>
