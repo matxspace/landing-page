@@ -329,70 +329,70 @@
     {
       name: 'Laura Barajas',
       title: 'Líder de Excelencia Operativa',
-      imageUrl: 'assets/img/team/laura.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/laura.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Laura Barajas',
       linkedin: 'https://www.linkedin.com/in/laura-barajasmartell/'
     },
     {
       name: 'Maximiliano Flores',
       title: 'Líder de Desarrollo',
-      imageUrl: 'assets/img/team/max.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/max.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Maximiliano Flores',
       linkedin: 'https://www.linkedin.com/in/maximilianofloresrubio/'
     },
     {
       name: 'Omar Saldaña',
       title: 'Investigación',
-      imageUrl: 'assets/img/team/omar.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/omar.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Omar Saldaña',
       linkedin: 'https://www.linkedin.com/in/omar-salda%C3%B1a-penetro-658ab9b1/'
     },
     {
       name: 'José Luis Rodríguez',
       title: 'Pruebas y Simulaciones',
-      imageUrl: 'assets/img/team/chepe.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/chepe.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de José Luis (Chepe) Rodríguez',
       linkedin: '', // No LinkedIn profile
     },
     {
       name: 'Gerardo Pérez',
       title: 'Diseño y Manufactura',
-      imageUrl: 'assets/img/team/gerardo.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/gerardo.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Gerardo Pérez',
       linkedin: '', // No LinkedIn profile
     },
     {
       name: 'Regina Guzmán',
       title: 'Marketing y Financiamiento',
-      imageUrl: 'assets/img/team/regina.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/regina.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Regina Guzmán',
       linkedin: 'https://www.linkedin.com/in/regina-guzm%C3%A1n-4a10531a8/'
     },
     {
       name: 'Arlette Silva',
       title: 'Vinculación',
-      imageUrl: 'assets/img/team/arlette.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/arlette.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Arlette Silva',
       linkedin: '', // No LinkedIn profile
     },
     {
       name: 'Katia Lombardo',
       title: 'Investigación',
-      imageUrl: 'assets/img/team/katia.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/katia.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Katia Lombardo',
       linkedin: '', // No LinkedIn profile
     },
     {
       name: 'Flavio Heredia',
       title: 'Pruebas y Simulación',
-      imageUrl: 'assets/img/team/flavio.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/flavio.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Flavio Heredia',
       linkedin: '', // No LinkedIn profile
     },
     {
       name: 'Ivan Galaviz',
       title: 'Marketing y Financiamiento',
-      imageUrl: 'assets/img/team/ivan.webp',
+      imageUrl: '/.netlify/images?url=assets/img/team/ivan.webp&w=400&q=80&fm=webp',
       imageAlt: 'Imagen de perfil de Ivan Galaviz',
       linkedin: 'https://www.linkedin.com/in/ivanovishado/'
     }
@@ -409,7 +409,7 @@
       <div class="col-lg-4 col-md-6 ${extraClass}">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="ratio ratio-1x1 mb-3" style="overflow: hidden;">
-            <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
+            <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}" loading="lazy">
           </div>
           <div class="member-info">
             <div class="member-info-content">
@@ -434,7 +434,7 @@
     const itemHTML = `
       <div class="carousel-item ${activeClass}">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
-          <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}">
+          <img src="${member.imageUrl}" class="img-fluid" alt="${member.imageAlt}" loading="lazy">
           <div class="member-info">
             <div class="member-info-content">
               <h4>${member.name}</h4>
@@ -454,42 +454,42 @@
   const mediaItems = [
     {
       link: "https://www.forbes.com.mx/musk-llevara-un-experimento-mexicano-al-espacio-en-octubre/",
-      logo: "./assets/img/news-carousel/logo_forbes_mexico.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/logo_forbes_mexico.png&w=200&q=80&fm=webp",
       alt: "Logo de Forbes México"
     },
     {
       link: "https://elpais.com/mexico/2024-12-02/los-chicos-que-sonaban-con-las-estrellas-la-historia-detras-del-ultimo-experimento-de-mexico-en-el-espacio.html",
-      logo: "./assets/img/news-carousel/el-pais.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/el-pais.png&w=200&q=80&fm=webp",
       alt: "Logo de EL PAÍS"
     },
     {
       link: "https://www.gob.mx/sct/prensa/lanza-con-exito-space-x-experimento-mexicano-mcb-1-a-la-estacion-espacial-internacional",
-      logo: "./assets/img/news-carousel/SCT.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/SCT.png&w=200&q=80&fm=webp",
       alt: "Logo de la Secretaría de Comunicaciones y Transportes de México"
     },
     {
       link: "https://www.viveusa.mx/noticias/elon-musk-llevara-experimento-mexicano-al-espacio-con-la-iniciativa-space-x/",
-      logo: "./assets/img/news-carousel/2.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/2.png&w=200&q=80&fm=webp",
       alt: "Logo de ViveUSA"
     },
     {
       link: "https://www.tvazteca.com/aztecanoticias/space-x-llevara-experimento-mexicano-mcb-1-a-la-eei-en-octubre",
-      logo: "./assets/img/news-carousel/3.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/3.png&w=200&q=80&fm=webp",
       alt: "Logo de Azteca Noticias"
     },
     {
       link: "https://www.swissinfo.ch/spa/experimento-mexicano-%27mcb-1%27-parte-al-espacio-con-%c3%a9xito-en-misi%c3%b3n-de-space-x-de-elon-musk/88000970",
-      logo: "./assets/img/news-carousel/4.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/4.png&w=200&q=80&fm=webp",
       alt: "Logo de SWI swissinfo"
     },
     {
       link: "https://www.nmas.com.mx/noticieros/programas/despierta/videos/space-x-llevara-experimento-mexicano-la-estacion-espacial-internacional/",
-      logo: "./assets/img/news-carousel/6.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/6.png&w=200&q=80&fm=webp",
       alt: "Logo de Noticieros Televisa"
     },
     {
       link: "https://spacewatchafrica.com/elon-musks-space-x-to-fly-mexican-experiment-mcb-1-to-the-international-space-station-in-october/",
-      logo: "./assets/img/news-carousel/5.png",
+      logo: "/.netlify/images?url=assets/img/news-carousel/5.png&w=200&q=80&fm=webp",
       alt: "Logo de Space Watch Africa"
     }
   ];
@@ -509,6 +509,7 @@
     img.src = item.logo;
     img.alt = item.alt;
     img.className = 'news-logo';
+    img.loading = 'lazy';
 
     anchor.appendChild(img);
     gridItem.appendChild(anchor);
