@@ -547,11 +547,6 @@ h6 {
   z-index: 0;
 }
 
-/* Ensure video displays correctly in carousel */
-#hero .carousel-item {
-  position: relative;
-}
-
 #hero .carousel-item .overlay {
   position: absolute;
   top: 0;
