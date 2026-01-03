@@ -20,6 +20,12 @@
           onLoadCallback();
         }
       };
+      t.onerror = function() {
+        console.warn('Clarity script failed to load. Domain may not be configured in Clarity project.');
+        if (onLoadCallback && typeof onLoadCallback === 'function') {
+          onLoadCallback();
+        }
+      };
       y=l.getElementsByTagName(r)[0];
       y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
